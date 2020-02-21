@@ -1,8 +1,10 @@
 ---
 layout: post
-title: 'WebComponent'
+title: 'WebComponent-0'
 date: 2020-02-17 12:47:24 +0800
-categories: blog, frontend, webcomponent,customcomponent
+tags:
+  - 前端开发
+  - WebComponent
 ---
 
 ref:[MDN: WebComponent](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
