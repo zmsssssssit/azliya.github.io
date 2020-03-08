@@ -4,7 +4,7 @@
 
 # Site
 title: Azliya's Blog
-subtitle: From FrontEnd Developer
+subtitle: life is all about interaction
 author: Azliya
 language:
 timezone:
@@ -58,8 +58,8 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "我要成为魔法师!"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: ""
+sidebar-avatar: ./img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
@@ -68,7 +68,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 # Friends
-friends: [
+# friends: [
     # {
     #     title: "Kaijun's Blog",
     #     href: "http://blog.kaijun.rocks"
@@ -88,7 +88,7 @@ friends: [
     #     title: "It helps SEO",
     #     href: "#"
     # }
-]
+# ]
 
 
 #Custom Setting End
@@ -148,4 +148,4 @@ theme: huxblog
 deploy:
   type: git
   repo: https://github.com/Azliya/azliya.github.io
-  branch: dp
+  branch: master
