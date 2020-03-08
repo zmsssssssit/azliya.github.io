@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "我的第一个POSTCSS plugin"
+title: '我的第一个POSTCSS plugin'
 date: 2020-02-16 12:47:24 +0800
 tags:
   - 前端开发
@@ -11,7 +11,7 @@ tags:
 
 # 面临的问题与动机
 
-工作上要对已有的WebApp项目做OEM和皮肤功能支持。我查阅了目前一些流行框架的解决方案：
+工作上要对已有的 WebApp 项目做 OEM 和皮肤功能支持。我查阅了目前一些流行框架的解决方案：
 
 | 方案来源    | 原理                                                    | 优点                     | 缺点                                         |
 | ----------- | ------------------------------------------------------- | ------------------------ | -------------------------------------------- |
@@ -28,7 +28,7 @@ tags:
 但是，直接换成以上方案是，时间和工作量上都是不现实的。因为几乎所有方案，对于我手头上的 POSTCSS “老”项目来说，迁移成本都很大：
 
 1. CSS 变量：整理统一 CSS 颜色，大规模重构
-2. css-in-js：整理统一 CSS 颜色 + 换框架，大规模重构，日后维护“类material-ui”的颜色样式映射工作量大
+2. css-in-js：整理统一 CSS 颜色 + 换框架，大规模重构，日后维护“类 material-ui”的颜色样式映射工作量大
 3. CSS 选择器+多套 style：整理统一 CSS 颜色，大规模重构，日后维护工作量=N\*M
 
 # 方案
@@ -41,21 +41,16 @@ tags:
 2. 产品使用了 POSTCSS 的 color-function plugin，颜色会是一个运算结果；
 3. 产品使用的 CSS color 变量多种多样，难以对比颜色的相似度，手动整理 platte 非常费力不讨好。
 
-需要对预处理过的 CSS 进行分析整理， POSTCSS 的 AST正好能帮上忙，所以我挖了个坑去帮我们自动去做这些事情：
+需要对预处理过的 CSS 进行分析整理， POSTCSS 的 AST 正好能帮上忙，所以我挖了个坑去帮我们自动去做这些事情：
 
 1. 将颜色整理输出成 CSS 变量；
 2. 整合阈值内相似颜色；
 3. 支持对 postcss-color-function 处理的颜色分析
 
-
-
 # POSTCSS plugin 速成
-
-
 
 # POSTCSS AST
 
 目前小插件功能比较简单，我要做的就是操作 AST 和使用简单的 NodeJs 就足够了。
 
-POSTCSS 的 [AST explorer](https://astexplorer.net/#/2uBU1BLuJ1) 帮助我更好地理解 AST 的数据结构。
-
+POSTCSS 提供了一个 [AST explorer](https://astexplorer.net/#/2uBU1BLuJ1) 预览 AST 的数据结构
